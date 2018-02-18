@@ -1,0 +1,27 @@
+//colors ================
+$accent: #fed136;
+$black: #222;
+$light-grey:#f1f1f1;
+$dark-grey-p: #777;
+$twitter-blue: #00aced;
+$facebook-blue: #3b5998;
+$pinterest-red:#cb2028;
+$google-red: #d95232;
+$background-grey: #f7f7f7;
+$white: #fff;
+
+// fonts ======================
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab');
+
+    @font-face {
+        font-family: droid-italic;
+        src: url('../vendor/fonts/DroidSerif-Italic.ttf')
+      }
+    @font-face {
+        font-family: wisdom-script;
+        src: url('../vendor/fonts/Wisdom-script.otf')
+      }
+
+$ff-droid: droid-italic;
+$ff-wisdom: wisdom-script;
+      
