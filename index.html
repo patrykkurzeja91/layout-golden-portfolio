@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +17,381 @@
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
 </head>
+
 <body>
-    <p>Silver</p>
-    <p>aka</p>
-    <p>Golden</p>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, molestias.</h1>
-    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, molestias.</h3>
-    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, molestias.</h2>
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, molestias.</h4>
+    <!-- HEADER WITH NAVBAR AND JUMBOTRON -->
+    <header id="home">
+        <nav class="my-navbar">
+            <div class="my-container">
+                <a class="my-logo" href="#home">Golden</a>
+                <button class="navbar-toggler hidden">i</button>
+
+                <div class="navbar-collapse">
+                    <ul>
+                        <li class="active">
+                            <a href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#services">Services</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#team">Team</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <img src="/images/background-image.png" alt="">
+            <div class="container">
+                <h3>Welcome to Our Studio!</h3>
+                <h1>It's nice to meet You</h1>
+                <a class="my-btn accent" href="#">Tell me more</a>
+            </div>
+
+        </div>
+    </header>
+    <!-- MAIN SECTION -->
+    <main>
+        <!-- SERVICES SECTION - 3 COLUMNS IN ROW -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Services</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <div class="service-icon">
+                            <img src="images/icon-basket.png"></img>
+                        </div>
+                        <div class="sub-title">
+                            <h4>E-commerce</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dicta animi obcaecati iste
+                                deserunt dolore repellat corporis labore facilis! Dignissimos?</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="service-icon">
+                            <img src="images/icon-laptop.png"></img>
+                        </div>
+                        <div class="sub-title">
+                            <h4>Responsive Web</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dicta animi obcaecati iste
+                                deserunt dolore repellat corporis labore facilis! Dignissimos?</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="service-icon">
+                            <img src="images/icon-locked.png"></img>
+                        </div>
+                        <div class="sub-title">
+                            <h4>Web Security</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dicta animi obcaecati iste
+                                deserunt dolore repellat corporis labore facilis! Dignissimos?</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- PORTFLOIO SECTION - GALLERY IMAGES IN FLEXBOX -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Portfolio</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="portfolio-gallery">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 col-xs-12">
+                            <!-- item-1 -->
+                            <div class="portfolio-item">
+                                <figure class="portfolio-photo">
+                                    <img src="images/image-1.png" alt="ebony and ivory">
+                                    <figcaption>
+                                        <h2 class="portfolio-title">Project Name</h2>
+                                        <p class="portfolio-desc">A short description could go right here</p>
+                                        <a href="#" class="portfolio-link">More info</a>
+                                    </figcaption>
+                            </div>
+                            <div class="sub-title">
+                                <h4>Ebony & Ivory</h4>
+                                <p>Branding</p>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-xs-12">
+                            <!-- item-2 -->
+                            <div class="portfolio-item">
+                                <figure class="portfolio-photo">
+                                    <img src="images/image-2.png" alt="ebony and ivory">
+                                    <figcaption>
+                                        <h2 class="portfolio-title">Project Name</h2>
+                                        <p class="portfolio-desc">A short description could go right here</p>
+                                        <a href="#" class="portfolio-link">More info</a>
+                                    </figcaption>
+
+                                </figure>
+                                <div class="sub-title">
+                                    <h4>Smart Stationary</h4>
+                                    <p>Print Design</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-xs-12">
+                            <!-- item-3 -->
+                            <div class="portfolio-item">
+                                <figure class="portfolio-photo">
+                                    <img src="images/image-3.png" alt="ebony and ivory">
+                                    <figcaption>
+                                        <h2 class="portfolio-title">Project Name</h2>
+                                        <p class="portfolio-desc">A short description could go right here</p>
+                                        <a href="#" class="portfolio-link">More info</a>
+                                    </figcaption>
+                                </figure>
+                                <div class="sub-title">
+                                    <h4>Clever Poster</h4>
+                                    <p>Print Design</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-xs-12">
+                                <!-- item-4 -->
+                                <div class="portfolio-item">
+                                    <figure class="portfolio-photo">
+                                        <img src="images/image-4.png" alt="burned logo">
+                                        <figcaption>
+                                            <h2 class="portfolio-title">Project Name</h2>
+                                            <p class="portfolio-desc">A short description could go right here</p>
+                                            <a href="#" class="portfolio-link">More info</a>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="sub-title">
+                                        <h4>Burned logo</h4>
+                                        <p>Branding</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                    <div class="col-xl-4 col-md-6 col-xs-12">
+                        <!-- item-5 -->
+                        <div class="portfolio-item">
+                            <figure class="portfolio-photo">
+                                <img src="images/image-5.png" alt="ebony and ivory">
+                                <figcaption>
+                                    <h2 class="portfolio-title">Project Name</h2>
+                                    <p class="portfolio-desc">A short description could go right here</p>
+                                    <a href="#" class="portfolio-link">More info</a>
+                                </figcaption>
+                            </figure>
+                            <div class="sub-title">
+                                <h4>Treehouse Template</h4>
+                                <p>Web Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-xs-12">
+                        <!-- item-6 -->
+                        <div class="portfolio-item">
+                            <figure class="portfolio-photo">
+                                <img src="images/image-6.png" alt="ebony and ivory">
+                                <figcaption>
+                                    <h2 class="portfolio-title">Project Name</h2>
+                                    <p class="portfolio-desc">A short description could go right here</p>
+                                    <a href="#" class="portfolio-link">More info</a>
+                                </figcaption>
+                            </figure>
+                            <div class="sub-title">
+                                <h4>Vinyl Record</h4>
+                                <p>Product Mock-Up</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION - VERTICAL TIMELINE WITH IMAGES IN THE MIDDLE -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Us</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="timeline">
+                    <div id="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                aa
+                            </div>
+                            <div class="timeline-content">
+                                <div class="sub-title">
+                                    <h4>LOREM 1</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.
+                                    </p>
+                                    <div class="sub-title"></div>
+
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    bb
+                                    </g>
+                                    </svg>
+
+                                </div>
+                                <div class="timeline-content right">
+                                    <div class="sub-title">
+                                        <h4>LOREM IPSUM DOLOR</h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium blanditiis
+                                            consequatur aspernatur accusantium maxime molestiae sunt ipsa.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    ccc
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="sub-title">
+                                        <h4>LOREM IPSUM DOLOR</h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium blanditiis
+                                            consequatur aspernatur accusantium maxime molestiae sunt ipsa.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- OUR TEM SECTION - 3 COLUMNS IN ROW -->
+        <section class="team" id="team">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Team</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="sub-title">
+                            <h4>E-commerce</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dicta animi obcaecati iste
+                                deserunt dolore repellat corporis labore facilis! Dignissimos?</p>
+                        </div>
+                        <a href="">
+                            <i></i>
+                        </a>
+                        <a href="">
+                            <i></i>
+                        </a>
+                        <a href="">
+                            <i></i>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sub-title">
+                            <h4>Responsive Web</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dicta animi obcaecati iste
+                                deserunt dolore repellat corporis labore facilis! Dignissimos?</p>
+                        </div>
+                        <a href="">
+                            <i></i>
+                        </a>
+                        <a href="">
+                            <i></i>
+                        </a>
+                        <a href="">
+                            <i></i>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sub-title">
+                            <h4>Web Security</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dicta animi obcaecati iste
+                                deserunt dolore repellat corporis labore facilis! Dignissimos?</p>
+                        </div>
+                        <a href="">
+                            <i></i>
+                        </a>
+                        <a href="">
+                            <i></i>
+                        </a>
+                        <a href="">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SMALL SECTION WITH COMPANY LOGOS -->
+        <section class="companies">
+            <div class="container">
+                <a href="">
+                    <img src="" alt="">
+                </a>
+                <a href="">
+                    <img src="" alt="">
+                </a>
+                <a href="">
+                    <img src="" alt="">
+                </a>
+                <a href="">
+                    <img src="" alt="">
+                </a>
+            </div>
+        </section>
+        <!-- CONTACT FORM DIVIDED INTO 2 COLUMNS -->
+        </section>
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact us</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <form action="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text">
+                            <input type="email">
+                            <input type="text">
+                        </div>
+                        <div class="col-md-6">
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+            </div>
+
+            </form>
+        </section>
+    </main>
+    <!-- FOOTER - COPYRIGHT AND SOCIAL MEDIA -->
+    <footer>
+
+    </footer>
 </body>
+
 </html>

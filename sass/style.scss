@@ -1,3 +1,4 @@
+@import 'vendor/normalize';
 //colors ================
 $accent: #fed136;
 $black: #222;
@@ -9,19 +10,565 @@ $pinterest-red:#cb2028;
 $google-red: #d95232;
 $background-grey: #f7f7f7;
 $white: #fff;
-
 // fonts ======================
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab');
+@font-face {
+    font-family: droid-italic;
+    src: url('../vendor/fonts/DroidSerif-Italic.ttf')
+}
 
-    @font-face {
-        font-family: droid-italic;
-        src: url('../vendor/fonts/DroidSerif-Italic.ttf')
-      }
-    @font-face {
-        font-family: wisdom-script;
-        src: url('../vendor/fonts/Wisdom-script.otf')
-      }
+@font-face {
+    font-family: wisdom-script;
+    src: url('../vendor/fonts/Wisdom-script.otf')
+}
 
 $ff-droid: droid-italic;
 $ff-wisdom: wisdom-script;
-      
+$ff-mont: 'Montserrat',
+sans-serif;
+//===================GENERAL STYLES
+body {
+    font-size: 14px;
+}
+
+.my-container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Montserrat';
+    font-size: 4em;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: $ff-droid;
+    font-style: italic;
+    font-size: 2.8em;
+    font-weight: 400;
+    color: $white;
+    letter-spacing: -1px;
+}
+
+.my-btn {
+    display: inline-block;
+    padding: 25px 50px;
+    border-radius: 5px;
+}
+
+.accent {
+    background: $accent;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-family: $ff-mont;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+}
+
+.section-title {
+    color: $black;
+    text-align: center;
+    h2 {
+        font-family: $ff-mont;
+        text-transform: uppercase;
+        font-size: 2.8em;
+        margin: 0;
+    }
+    p {
+        font-family: $ff-droid;
+        color: $dark-grey-p;
+        font-size: 1.1em;
+        margin: 20px 0;
+    }
+}
+
+.sub-title {
+    color: $black;
+    text-align: center;
+    h4 {
+        font-family: $ff-mont;
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+    p {
+        font-family: $ff-droid;
+        color: $dark-grey-p;
+        font-size: 1em;
+    }
+}
+
+//==================NAVBAR STYLES
+.my-navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: .3s;
+    z-index: 3;
+    &.fixed {
+        position: fixed;
+        height: 60px;
+        background: $black;
+        z-index: 5;
+        .logo {
+            padding: 20px 0;
+            transition: .3s;
+        }
+        ul>li>a {
+            padding: 10px 10px 0;
+            margin-bottom: 10px;
+        }
+    }
+    .hidden {
+        display: none;
+    }
+}
+
+.my-logo {
+    display: inline-block;
+    font-family: $ff-wisdom;
+    font-size: 2em;
+    color: $accent;
+    cursor: pointer;
+    margin: 5px 10px 0;
+    transition: .3s;
+    line-height: 42px;
+}
+
+.navbar-collapse {
+    display: inline-block;
+    float: right;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        li {
+            display: inline-block;
+            a {
+                font-family: $ff-mont;
+                display: block;
+                margin-left: 30px;
+                margin-top: 20px;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $white;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: 0.4px;
+                transition: .3s;
+            }
+            &:hover a {
+                color: $accent;
+            }
+            &.active a {
+                color: $accent;
+            }
+        }
+    }
+}
+
+//==================JUMBOTRON STYLES
+.hero {
+    height: 100vh;
+    background: black;
+    z-index: 1;
+    position: relative; // background-image: url('../images/background-image.png');
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.hero img {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    background-attachment: fixed;
+    z-index: -2;
+}
+
+//=====================SERVICES STYLES
+.row::after,
+.row::before {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.services {
+    margin: 120px auto;
+}
+
+.services [class*="col-"] {
+    margin: 50px auto;
+}
+
+.service-icon {
+    margin: 25px auto;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    border: 3px solid $accent;
+    border-radius: 50%;
+}
+
+.service-icon img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+//=====================PORTFOLIO STYLES
+.portfolio {
+    background: $background-grey;
+    padding: 120px 0;
+    .section-title {
+        margin-bottom: 30px;
+    }
+    .sub-title {
+        margin-top: 29px;
+        h4 {
+            margin: 5px 0 0 0;
+        }
+        p {
+            margin: 0;
+        }
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+.portfolio-photo {
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    figcaption {
+        position: absolute;
+        top: 130%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($accent, .8);
+        color: $white;
+        text-shadow: 1px 1px 3px $dark-grey-p;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 2em;
+        transition: top ease-in-out 250ms;
+    }
+    &:hover figcaption, 
+    &:focus figcaption, {
+        top: 0;
+    }
+}
+
+.portfolio-title {
+    font-size: 2.2em;
+    margin-bottom: auto;
+    font-family: $ff-mont;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.portfolio-desc {
+    font-family: $ff-droid;
+    font-size: 1em;
+}
+.portfolio-link {
+    font-family: $ff-mont;
+    font-weight: 700;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: $white;
+    transition: .2s;
+    align-self: flex-start;
+    border-bottom: 2px solid $white;
+    
+}
+a:hover {
+    text-decoration: none;
+}
+
+// ====================================================
+//=======================================================
+// ====================================================
+//=======================================================
+// $bg-body: #f9f9f9;
+// $red: #ee4d4d;
+// $blue: #2b2e48;
+// $primary-color: $red;
+// $secondary-color: $blue;
+// // Typography
+// $base-font: helvetica, arial, tahoma, verdana;
+// $base-font-title: "Dosis", arial, tahoma, verdana;
+// $base-font-color: #726f77;
+// // Timeline
+// $timeline-color: $primary-color;
+// // Mixins and Placeholders
+// %clearfix {
+// 	&:after, &:before {
+// 		content: '';
+// 		display: block;
+// 		width: 100%;
+// 		clear: both;
+// 	}
+// }
+// @mixin prefix($prop, $val) {
+// 	@each $prefix in '-webkit-', '-moz-', '-ms-', '' {
+// 		#{$prefix}#{$prop}: $val;
+// 	}
+// }
+// *, *:before, *:after {
+// 	box-sizing: border-box;
+// 	-webkit-box-sizing: border-box;
+// 	-moz-box-sizing: border-box;
+// }
+// body, html {
+// 	height: 100%;
+// }
+// body {
+// 	background: $bg-body;
+// 	background-size: cover;
+// 	margin: 0;
+// 	padding: 0;
+// 	font-family: $base-font;
+// 	line-height: 20px;
+// 	font-size: 14px;
+// 	color: $base-font-color;
+// }
+// img {max-width: 100%;}
+// a {
+// 	text-decoration: none;
+// }
+// .container {
+// 	max-width: 1100px;
+// 	margin: 0 auto;
+// }
+// h1, h2, h3, h4 {
+//   font:{
+// 		family: $base-font-title;
+// 		weight: 500;
+// 	}
+// }
+// .project-name {
+//   text-align: center;
+//   padding: 10px 0;
+// }
+// // Header
+// header {	
+// 	background: $secondary-color;
+// 	padding: 10px;
+// 	@include prefix(box-shadow, 0 3px 3px rgba(0,0,0,0.05)); 
+// 	@extend %clearfix;
+// 	.logo {
+// 		color: $primary-color;
+// 		float: left;
+// 		font:{
+// 			family: $base-font-title;
+// 			size: 22px;
+// 			weight: 500;
+// 		}
+// 		> span {
+// 			color: lighten($primary-color, 20%);
+// 			font-weight: 300;
+// 		}
+// 	}
+// 	.social {
+// 		float: right;
+// 		.btn {
+// 			font-family: "Dosis";
+// 			font-size: 14px;
+// 			margin: 10px 5px;
+// 		}
+// 	}
+// }
+// // Timeline
+// #timeline {
+// 	width: 100%;
+//   margin: 30px auto;
+// 	position: relative;
+//   padding: 0 10px;
+// 	@include prefix(transition, all .4s ease);
+// 	&:before {
+// 		content:"";
+// 		width: 3px;
+// 		height: 100%;
+// 		background: $timeline-color;
+// 		left: 50%;
+// 		top: 0;
+// 		position: absolute;
+// 	}
+// 	&:after {
+// 		content: "";
+// 		clear: both;
+// 		display: table;
+// 		width: 100%;
+// 	}
+// 	.timeline-item {
+// 		margin-bottom: 50px;
+// 		position: relative;
+// 		@extend %clearfix;
+// 		.timeline-icon {
+// 			background: $timeline-color;
+// 			width: 50px;
+// 			height: 50px;
+// 			position: absolute;
+// 			top: 0;
+// 			left: 50%;
+// 			overflow: hidden;
+// 			margin-left: -23px;
+// 			@include prefix(border-radius, 50%);
+// 			svg {
+// 				position: relative;
+// 				top: 14px;
+// 				left: 14px;
+// 			}
+// 		}
+// 		.timeline-content {
+// 			width: 45%;
+// 			background: #fff;
+// 			padding: 20px;
+// 			@include prefix(box-shadow, 0 3px 0 rgba(0,0,0,0.1));
+// 			@include prefix(border-radius, 5px);
+// 			@include prefix(transition, all .3s ease);
+// 			h2 {
+// 				padding: 15px;
+// 				background: $timeline-color;
+// 				color: #fff;
+// 				margin: -20px -20px 0 -20px;
+// 				font-weight: 300;
+// 				@include prefix(border-radius, 3px 3px 0 0);
+// 			}
+// 			&:before {
+// 				content: '';
+// 				position: absolute;
+// 				left: 45%;
+// 				top: 20px;
+// 				width: 0; 
+// 				height: 0; 
+// 				border-top: 7px solid transparent;
+// 				border-bottom: 7px solid transparent; 
+// 				border-left:7px solid $timeline-color; 
+// 			}
+// 			&.right {
+// 				float: right;
+// 				&:before {
+// 					content: '';
+// 					right: 45%;
+// 					left: inherit;
+// 					border-left: 0;
+// 					border-right: 7px solid $timeline-color;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+// // Buttons
+// .btn {
+// 	padding: 5px 15px;
+// 	text-decoration: none;
+// 	background: transparent;
+// 	border: 2px solid lighten($primary-color, 10%);
+// 	color: lighten($primary-color, 10%);
+// 	display: inline-block;
+// 	position: relative;
+// 	text-transform: uppercase;
+// 	font-size: 12px;
+// 	@include prefix(border-radius, 5px);
+// 	@include prefix(transition, background .3s ease);
+// 	@include prefix(box-shadow, 2px 2px 0 lighten($primary-color, 10%));
+// 	&:hover {
+// 		box-shadow: none ;
+// 		top: 2px;
+// 		left: 2px;
+// 		@include prefix(box-shadow, 2px 2px 0 transparent);
+// 	}
+// }
+// @media screen and (max-width: 768px) {
+// 	#timeline {
+// 		margin: 30px;
+// 		padding: 0px;
+//     width: 90%;
+// 		&:before {
+// 			left: 0;
+// 		}
+// 		.timeline-item {
+// 			.timeline-content {
+// 				width: 90%;
+// 				float: right;
+// 				&:before, &.right:before {
+// 					left: 10%;
+// 					margin-left: -6px;
+// 					border-left: 0;
+// 					border-right: 7px solid $timeline-color;
+// 				}
+// 			}
+// 			.timeline-icon {
+// 				left: 0;
+// 			}
+// 		}
+// 	}
+// }
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
