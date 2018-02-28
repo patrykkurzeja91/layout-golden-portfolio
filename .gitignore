@@ -6,7 +6,6 @@ yarn-debug.log*
 yarn-error.log*
 
 #css
-css/*.css
 css/*.map
 
 # Runtime data
