@@ -7,43 +7,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Golden - Portfolio site</title>
     <!--    LINKS   -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <!--    SCRIPTS   -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
     <!-- HEADER WITH NAVBAR AND JUMBOTRON -->
     <header id="home">
-        <nav class="my-navbar">
+        <nav class="my-navbar navbar-toggleable-sm">
             <div class="my-container">
-                <a class="my-logo" href="#home">Golden</a>
-                <button class="navbar-toggler hidden">i</button>
-
-                <div class="navbar-collapse">
-                    <ul>
-                        <li class="active">
+                <button id="toggle-btn" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a class=" my-logo" href="#home">Golden</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
                             <a href="#home">Home</a>
                         </li>
-                        <li>
+                        <li class="">
                             <a href="#services">Services</a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="#portfolio">Portfolio</a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="#about">About</a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="#team">Team</a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="#contact">Contact</a>
                         </li>
                     </ul>
@@ -51,9 +57,9 @@
             </div>
         </nav>
 
-        <div class="hero">
-            <img src="/images/background-image.png" alt="">
-            <div class="container">
+        <div class="hero parallax-bg">
+            <!-- <img src="/images/background-image.png" alt=""> -->
+            <div data-aos="fade-in" data-aos-delay="200" data-aos-duration="2000" class="container">
                 <h3>Welcome to Our Studio!</h3>
                 <h1>It's nice to meet You</h1>
                 <a class="my-btn accent" href="#">Tell me more</a>
@@ -112,7 +118,7 @@
                 </div>
                 <div class="portfolio-gallery">
                     <div class="row">
-                        <div class="col-xl-4 col-md-6 col-xs-12">
+                        <div data-aos="fade-up" class="col-xl-4 col-md-6 col-xs-12">
                             <!-- item-1 -->
                             <div class="portfolio-item">
                                 <figure class="portfolio-photo">
@@ -120,7 +126,7 @@
                                     <figcaption>
                                         <h2 class="portfolio-title">Project Name</h2>
                                         <p class="portfolio-desc">A short description could go right here</p>
-                                        <a href="#" class="portfolio-link">More info</a>
+                                        <a href="#" class="portfolio-link" data-toggle="modal" data-target="#modal1">More info</a>
                                     </figcaption>
                             </div>
                             <div class="sub-title">
@@ -129,7 +135,7 @@
                                 </figure>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-md-6 col-xs-12">
+                        <div data-aos="fade-up" class="col-xl-4 col-md-6 col-xs-12">
                             <!-- item-2 -->
                             <div class="portfolio-item">
                                 <figure class="portfolio-photo">
@@ -147,7 +153,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-md-6 col-xs-12">
+                        <div data-aos="fade-up" class="col-xl-4 col-md-6 col-xs-12">
                             <!-- item-3 -->
                             <div class="portfolio-item">
                                 <figure class="portfolio-photo">
@@ -164,7 +170,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-md-6 col-xs-12">
+                        <div data-aos="fade-up" class="col-xl-4 col-md-6 col-xs-12">
                             <!-- item-4 -->
                             <div class="portfolio-item">
                                 <figure class="portfolio-photo">
@@ -182,7 +188,7 @@
                             </div>
                         </div>
 
-                        <div class="col-xl-4 col-md-6 col-xs-12">
+                        <div data-aos="fade-up" class="col-xl-4 col-md-6 col-xs-12">
                             <!-- item-5 -->
                             <div class="portfolio-item">
                                 <figure class="portfolio-photo">
@@ -199,7 +205,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-md-6 col-xs-12">
+                        <div data-aos="fade-up" class="col-xl-4 col-md-6 col-xs-12">
                             <!-- item-6 -->
                             <div class="portfolio-item">
                                 <figure class="portfolio-photo">
@@ -217,11 +223,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
-
                 </div>
             </div>
         </section>
@@ -236,7 +237,7 @@
                 <div class="timeline">
                     <div id="timeline">
                         <!-- 1. ELEMENT OF TIMELINE -->
-                        <div class="timeline-item">
+                        <div data-aos="fade-up-right" class="timeline-item">
                             <!-- middle circle div -->
                             <div class="timeline-img">
                                 <div class="tm-photo">
@@ -248,14 +249,17 @@
                                     <h4>July 2015</h4>
                                     <h4>Our humble beginnings</h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis. Lorem ipsum dolor sit amet consectetur.  
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo
+                                        <span
+                                            class="hidden-on-start">maiores magnam modi ab libero praesentium blanditiis. Lorem ipsum dolor sit amet
+                                            consectetur. </span>
                                     </p>
                                 </div>
 
                             </div>
                         </div>
                         <!-- 2. ELEMENT OF TIMELINE -->
-                        <div class="timeline-item">
+                        <div data-aos="fade-up-left" class="timeline-item">
                             <!-- middle circle div -->
                             <div class="timeline-img">
                                 <div class="tm-photo">
@@ -267,15 +271,17 @@
                                     <h4>January 2017</h4>
                                     <h4>Facing startup battles</h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium blanditiis
-                                        consequatur aspernatur accusantium maxime molestiae sunt ipsa.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo.
+                                        <span
+                                            class="hidden-on-start"> Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur accusantium
+                                            maxime molestiae sunt ipsa.</span>
                                     </p>
                                 </div>
 
                             </div>
                         </div>
                         <!-- 3. ELEMENT OF TIMELINE -->
-                        <div class="timeline-item">
+                        <div data-aos="fade-up-right" class="timeline-item">
                             <!-- middle circle div -->
                             <div class="timeline-img">
                                 <div class="tm-photo">
@@ -295,7 +301,7 @@
                             </div>
                         </div>
                         <!-- 4. ELEMENT OF TIMELINE -->
-                        <div class="timeline-item">
+                        <div data-aos="fade-up-left" class="timeline-item">
                             <!-- middle circle div -->
                             <div class="timeline-img">
                                 <div class="tm-photo">
@@ -315,15 +321,19 @@
                             </div>
                         </div>
                         <!-- ==== LAST ELEMENT OF TIMELINE - OTHER THEN REST, NO IMAGE-->
-                        <div class="timeline-item">
-                                <!-- middle circle div -->
-                                <div class="timeline-img">
-                                    <div class="tm-photo">
-                                       <a class=""href="">Our <br> story <br> continues <br> ...</a> </div>
+                        <div data-aos="fade-up" data-aos-duration="1000" class="timeline-item">
+                            <!-- middle circle div -->
+                            <div class="timeline-img">
+                                <div class="tm-photo">
+                                    <a class="" href="">Our
+                                        <br> story
+                                        <br> continues
+                                        <br> ...</a>
                                 </div>
-                                <!-- end of middle circle -->
-                                
                             </div>
+                            <!-- end of middle circle -->
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -336,7 +346,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div data-aos="fade-up" data-aos-duration="2000" class="col-md-4">
                         <div class="team-photo">
                             <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
                         </div>
@@ -345,56 +355,57 @@
                             <p>Marketer</p>
                         </div>
                         <div class="team-social">
-                                <a class="i-twitter" href="https://twitter.com">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a class="i-facebook" href="https://facebook.com">
-                                        <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a class="i-pinterest" href="https://pinterest.com">
-                                        <i class="fab fa-pinterest-p"></i>
-                                </a>
+                            <a class="i-twitter" href="https://twitter.com">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="i-facebook" href="https://facebook.com">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="i-pinterest" href="https://pinterest.com">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
                         </div>
-                        
+
                     </div>
-                    <div class="col-md-4">
-                            <div class="team-photo">
-                                    
-                                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
-                                    
-                                </div>
+                    <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000" class="col-md-4">
+                        <div class="team-photo">
+
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+
+                        </div>
                         <div class="sub-title">
                             <h4>Rico Massimo</h4>
                             <p>Coder</p>
                         </div>
                         <div class="team-social">
-                                <a class="i-twitter" href="https://twitter.com">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a class="i-facebook" href="https://facebook.com">
-                                        <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a class="i-google" href="http://googleplus.com">
-                                        <i class="fab fa-google-plus-g"></i>
-                                </a>
+                            <a class="i-twitter" href="https://twitter.com">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="i-facebook" href="https://facebook.com">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="i-google" href="http://googleplus.com">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                            <div class="team-photo">
-                                    <img src="https://images.unsplash.com/photo-1509458019233-04cb358d8d05?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=99ea9895c24fa9a7b7ab33057aaeca6d&auto=format&fit=crop&w=334&q=80" alt="">
-                                </div>
+                    <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000" class="col-md-4">
+                        <div class="team-photo">
+                            <img src="https://images.unsplash.com/photo-1509458019233-04cb358d8d05?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=99ea9895c24fa9a7b7ab33057aaeca6d&auto=format&fit=crop&w=334&q=80"
+                                alt="">
+                        </div>
                         <div class="sub-title">
                             <h4>Uku Mason</h4>
                             <p>Graphic Designer</p>
                         </div>
                         <div class="team-social">
-                                
-                                <a class="i-facebook"href="https://facebook.com">
-                                        <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a class="i-google" href="http://googleplus.com">
-                                        <i class="fab fa-google-plus-g"></i>
-                                </a>
+
+                            <a class="i-facebook" href="https://facebook.com">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="i-google" href="http://googleplus.com">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -404,65 +415,116 @@
         <section class="companies">
             <div class="container">
                 <div class="logos">
-                        <a href="">
-                                <img src="images/tuts-.png" alt="">
-                            </a>
-                            <a href="">
-                                <img src="images/envato.png" alt="">
-                            </a>
-                            <a href="">
-                                <img src="images/wordpress.png" alt="">
-                            </a>
-                            <a href="">
-                                <img src="images/microlancer-copy.png" alt="">
-                            </a>
+                    <a href="">
+                        <img src="images/tuts-.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="images/envato.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="images/wordpress.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="images/microlancer-copy.png" alt="">
+                    </a>
                 </div>
-                
+
             </div>
         </section>
         <!-- CONTACT FORM DIVIDED INTO 2 COLUMNS -->
         </section>
         <section class="contact" id="contact">
+
             <div class="container">
                 <div class="section-title">
                     <h2>Contact us</h2>
                     <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
-                <form action="">
-                    <div class="row">
+                <form action="mail.php" method="POST">
+                    <div class="row row-eq-height">
                         <div class="col-md-6">
                             <!-- name -->
                             <div class="form-group">
-                                    
-                                    <input type="text" class="form-control" id="inputAddress" placeholder="YOUR NAME*">
-                                  </div>
+                                name="email"
+                                <input type="text" class="form-control" id="inputAddress" placeholder="YOUR NAME*" name="name">
+                            </div>
                             <!-- e-mail -->
                             <div class="form-group">
-                                    
-                                    <input type="email" class="form-control" id="inputEmail4" placeholder="YOUR EMAIL*">
-                                  </div>
+
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="YOUR EMAIL*" name="email">
+                            </div>
                             <!-- subject -->
                             <div class="form-group">
-                                    
-                                    <input type="text" class="form-control" id="inputAddress" placeholder="SUBJECT">
-                                  </div>
+
+                                <input type="text" class="form-control" id="inputAddress" placeholder="SUBJECT" name="subject">
+                            </div>
                         </div>
 
                         <div class="col-md-6">
-                                <div class="form-group area">
-                                        
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="YOUR MESSAGE*"></textarea>
-                                      </div>
+                            <div class="form-group area">
+
+                                <textarea class="form-control" id="formArea" placeholder="YOUR MESSAGE*" name="message"></textarea>
+                            </div>
                         </div>
                     </div>
+                    <input type="submit" class="my-btn accent" value=" Send message">
+
             </div>
 
             </form>
+            <!-- <img src="images/map-image.png" alt=""> -->
+
         </section>
     </main>
     <!-- FOOTER - COPYRIGHT AND SOCIAL MEDIA -->
     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="my-social-network">© Copyright 2018 DSGN
+                        <strong>PK</strong>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="my-social-network">
+                        <a class="i-github" href="https://github.com/patraspan/golden-portfolio" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a class="i-facebook" href="https://facebook.com" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="i-google" href="http://googleplus.com" target="_blank">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                        <a class="i-instagram" href="http://instagram.com" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 1 -->
+        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="EbonyIvory" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 
