@@ -107,7 +107,6 @@ p {
         font-size: 1em;
     }
 }
-
 //==================NAVBAR STYLES
 #home {
     .my-logo {
@@ -139,7 +138,6 @@ p {
             }
         }
         @media (min-width: 768px) {
-            
             //when navbar is not on the top of site:
             &.fixed {
                 position: fixed;
@@ -158,12 +156,10 @@ p {
                     font-size: 14px;
                 }
             }
-            
         }
         .hidden {
             display: none;
         }
-        
     }
     #toggle-btn {
         color: $white;
@@ -174,7 +170,6 @@ p {
             color: $accent;
         }
     }
-    
     #navbarNav {
         width: 85%;
         float: right;
@@ -186,24 +181,20 @@ p {
 }
 
 .navbar-collapse {
-    
     ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-       
         li {
             display: inline-block;
-
             &:last-of-type a {
-                @media (min-width:768px){
+                @media (min-width: 768px) {
                     margin-right: 15px;
                 }
             }
             a {
                 font-family: $ff-mont;
                 display: block;
-                
                 text-decoration: none;
                 text-transform: uppercase;
                 color: $white;
@@ -211,7 +202,7 @@ p {
                 font-weight: 400;
                 letter-spacing: 0.4px;
                 transition: .3s;
-                @media (min-width:768px){
+                @media (min-width: 768px) {
                     margin: 20px 0 0 30px;
                 }
             }
@@ -219,9 +210,7 @@ p {
             &.active a {
                 color: $accent;
             }
-             
         }
-        
     }
     @media (max-width: 768px) {
         li {
@@ -235,9 +224,7 @@ p {
             &:hover {
                 background: #333;
             }
-            
         }
-        
     }
 }
 
@@ -508,7 +495,6 @@ a:hover {
                         font-size: 0.9em;
                     }
                 }
-                
             }
             .timeline-content {
                 margin: auto 0;
@@ -525,14 +511,12 @@ a:hover {
                         text-align: left;
                     }
                     @media (max-width: 460px) {
-                        .hidden-on-start{
+                        .hidden-on-start {
                             visibility: hidden;
                             &::after {
                                 content: '...';
                             }
                         }
-                        
-
                         margin-left: 20px;
                     }
                     text-align: right;
@@ -546,7 +530,6 @@ a:hover {
                     h4:last-of-type {
                         text-transform: capitalize;
                     }
-                    
                 }
                 &.right {
                     float: right;
