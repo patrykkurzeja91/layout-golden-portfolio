@@ -1,3 +1,5 @@
+
+@import "vendor/bootstrap.scss";
 //colors ================
 $accent: #fed136;
 $black: #222;
@@ -15,7 +17,6 @@ $white: #fff;
     font-family: droid-italic;
     src: url('../vendor/fonts/DroidSerif-Italic.ttf')
 }
-
 @font-face {
     font-family: wisdom-script;
     src: url('../vendor/fonts/Wisdom-script.otf')
@@ -30,13 +31,11 @@ body {
     font-size: 14px;
     min-width: 360px;
 }
-
 .my-container {
     min-width: 360px;
     max-width: 940px;
     margin: 0 auto;
 }
-
 h1 {
     font-family: 'Montserrat';
     font-size: 4em;
@@ -59,6 +58,7 @@ h3 {
     padding: 25px 50px;
     border-radius: 5px;
     border: none;
+    transition: ease-in-out .2s;
 }
 
 .accent {
@@ -234,6 +234,16 @@ p {
     display: flex;
     text-align: center;
     align-items: center;
+    @media (max-width:768px) {
+        h1,h3, .my-btn {
+            transform: scale(0.8)
+        }
+        h1 {
+margin-bottom: 1.5rem;
+margin-top: 1rem;
+        }
+
+    }
 }
 
 .parallax-bg {
@@ -257,6 +267,7 @@ p {
 //     background-position: center;
 //     z-index: -2;
 // }
+
 //=====================SERVICES STYLES
 .row::after,
 .row::before {
@@ -330,12 +341,24 @@ p {
         justify-content: flex-end;
         padding: 2em;
         transition: top ease-in-out 250ms;
+        a {
+            outline: none;
+            
+        }
     }
-    &:hover figcaption,
-    &:focus figcaption,
+    @media (min-width:768px) {
+        &:hover figcaption{
+            top: 0;
+        }
+    }
+    @media (max-width:767.98px) {
+        &.active figcaption
         {
         top: 0;
     }
+    }
+    
+    
 }
 
 .portfolio-title {
@@ -360,10 +383,34 @@ p {
     transition: .2s;
     align-self: flex-start;
     border-bottom: 2px solid $white;
+    cursor: pointer
 }
 
 a:hover {
     text-decoration: none;
+}
+.modal {
+    font-family: $ff-mont;
+    color: $white;
+    margin-top: 40px;
+    .row {
+        font-weight: 900;
+    }
+    .close {
+        color: $white;
+    }
+    iframe {
+        height: 400px;
+        width: 100%;
+        border: none;
+       }
+    td {
+        border-top: none;
+        border-bottom: 1px solid $gray-dark;
+    }
+    .modal-footer {
+        margin: 15px auto;
+    }
 }
 
 // ====================================================
@@ -489,6 +536,7 @@ a:hover {
                     justify-content: center;
                     background: $accent;
                     color: $white;
+                    outline: none;
                     @media (max-width: 768px) {
                         width: 90px;
                         height: 90px;

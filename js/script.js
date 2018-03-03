@@ -5,7 +5,8 @@ $(document).ready(function () {
 			return window.innerWidth < maxWidth;
 		}
 	});
-
+	//toggle figcaption in portfolio
+	toggleImgFigcaption()
 	//toggle 'active'class to btn
 	toggleBtn();
 	// showText();
@@ -54,18 +55,30 @@ $(document).ready(function () {
 
 	}
 	//function showText not working yet
-// function showText() {
-// 	$('.timeline-item').click(function (e) {
-// 		e.preventDefault();
-// 		$('.sub-title p').closest('span').toggleClass('hidden-on-start');
-// 	});
-// }
+	// function showText() {
+	// 	$('.timeline-item').click(function (e) {
+	// 		e.preventDefault();
+	// 		$('.sub-title p').closest('span').toggleClass('hidden-on-start');
+	// 	});
+	// }
 	function toggleBtn() {
+		
 		$('#toggle-btn').click(function (e) {
 			e.preventDefault();
 			$(this).toggleClass('active');
 		});
 	}
+	function toggleImgFigcaption() {
+		if (document.documentElement.clientWidth <= 768) {
+			$('.portfolio-photo').click(function (e) {
+				e.preventDefault();
+				$(this).closest('figure').toggleClass('active');
+			});
+		}
+		
+		
+	}
+	
 	/* funkcja która chowa menu podczas kliknięcia na link - odnośnik
 	function hideMenu() {
 		$('#home a').click(function (e) {
@@ -74,5 +87,5 @@ $(document).ready(function () {
 		});
 	}
 */
-
+  
 });
