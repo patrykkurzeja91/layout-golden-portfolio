@@ -6405,7 +6405,7 @@ p {
     -o-transition: .2s;
     transition: .2s; }
     .navbar-collapse li a {
-      margin: 8px;
+      padding: 8px;
       font-size: 12px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -6564,6 +6564,9 @@ a:hover {
     height: 400px;
     width: 100%;
     border: none; }
+    @media (max-width: 768px) {
+      .modal iframe {
+        height: 300px; } }
   .modal td {
     border-top: none;
     border-bottom: 1px solid #292b2c; }
@@ -6630,7 +6633,8 @@ a:hover {
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         transform: translateX(-50%);
-        border-radius: 50%; }
+        border-radius: 50%;
+        z-index: 2; }
         @media (max-width: 768px) {
           .about #timeline .timeline-item .timeline-img {
             width: 100px;
@@ -6753,6 +6757,23 @@ a:hover {
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             justify-content: center; }
+      .about #timeline .timeline-item .last-item-content {
+        position: absolute;
+        z-index: 0;
+        right: 0;
+        top: 0; }
+        @media (min-width: 768px) {
+          .about #timeline .timeline-item .last-item-content {
+            font-size: 12rem;
+            opacity: 0.08; } }
+        @media (max-width: 768px) {
+          .about #timeline .timeline-item .last-item-content {
+            right: 20%;
+            font-size: 7rem;
+            opacity: 0.12; } }
+        @media (max-width: 500px) {
+          .about #timeline .timeline-item .last-item-content {
+            right: 0; } }
 
 @media screen and (max-width: 768px) {
   #timeline {
@@ -6770,6 +6791,9 @@ a:hover {
 .team {
   padding: 120px 0 70px;
   background: #f7f7f7; }
+  @media (max-width: 768px) {
+    .team {
+      padding: 120px 0 0px; } }
   .team .team-photo {
     margin: 0 auto;
     width: 230px;
@@ -6827,17 +6851,19 @@ a:hover {
       -webkit-transition: .3s;
       -o-transition: .3s;
       transition: .3s; }
-      .team .team-social a:hover {
-        border: none;
-        color: #fff; }
-    .team .team-social .i-facebook:hover {
-      background: #3b5998; }
-    .team .team-social .i-twitter:hover {
-      background: #00aced; }
-    .team .team-social .i-pinterest:hover {
-      background: #cb2028; }
-    .team .team-social .i-google:hover {
-      background: #d95232; }
+      @media (min-width: 768px) {
+        .team .team-social a:hover {
+          border: none;
+          color: #fff; } }
+    @media (min-width: 768px) {
+      .team .team-social .i-facebook:hover {
+        background: #3b5998; }
+      .team .team-social .i-twitter:hover {
+        background: #00aced; }
+      .team .team-social .i-pinterest:hover {
+        background: #cb2028; }
+      .team .team-social .i-google:hover {
+        background: #d95232; } }
 
 .logos {
   display: block;
@@ -6899,6 +6925,9 @@ footer .row .my-social-network {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media (max-width: 768px) {
+    footer .row .my-social-network {
+      height: 50px; } }
   footer .row .my-social-network a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6922,26 +6951,28 @@ footer .row .my-social-network {
     -o-transition: .3s;
     transition: .3s;
     margin: auto 5px; }
-    footer .row .my-social-network a:hover {
-      border: none;
-      color: #fff; }
-  footer .row .my-social-network .i-facebook:hover {
-    background: #3b5998;
-    -webkit-transform: rotatez(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotatez(360deg); }
-  footer .row .my-social-network .i-github:hover {
-    background: black;
-    -webkit-transform: rotatez(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotatez(360deg); }
-  footer .row .my-social-network .i-instagram:hover {
-    background: #9d7144;
-    -webkit-transform: rotatez(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotatez(360deg); }
-  footer .row .my-social-network .i-google:hover {
-    background: #d95232;
-    -webkit-transform: rotatez(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotatez(360deg); }
+    @media (min-width: 768px) {
+      footer .row .my-social-network a:hover {
+        border: none;
+        color: #fff; } }
+  @media (min-width: 768px) {
+    footer .row .my-social-network .i-facebook:hover {
+      background: #3b5998;
+      -webkit-transform: rotatez(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotatez(360deg); }
+    footer .row .my-social-network .i-github:hover {
+      background: black;
+      -webkit-transform: rotatez(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotatez(360deg); }
+    footer .row .my-social-network .i-instagram:hover {
+      background: #9d7144;
+      -webkit-transform: rotatez(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotatez(360deg); }
+    footer .row .my-social-network .i-google:hover {
+      background: #d95232;
+      -webkit-transform: rotatez(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotatez(360deg); } }

@@ -8,8 +8,8 @@
     <title>Golden - Portfolio site</title>
     <!--    LINKS   -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"> -->
-    
-    
+
+
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <!--    SCRIPTS   -->
@@ -20,7 +20,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    
+
 </head>
 
 <body>
@@ -128,7 +128,7 @@
                                     <figcaption>
                                         <h2 class="portfolio-title">Project Name</h2>
                                         <p class="portfolio-desc">A short description could go right here</p>
-                                        <div href="#" class="nounderline portfolio-link" data-toggle="modal" data-target="#modal1">More info</div>
+                                        <div class="portfolio-link" data-toggle="modal" data-target="#modal1">More info</div>
                                     </figcaption>
                             </div>
                             <div class="sub-title">
@@ -145,7 +145,7 @@
                                     <figcaption>
                                         <h2 class="portfolio-title">Project Name</h2>
                                         <p class="portfolio-desc">A short description could go right here</p>
-                                        <a href="#" class="portfolio-link">More info</a>
+                                        <div class="portfolio-link" data-toggle="modal" data-target="#modal2">More info</div>
                                     </figcaption>
 
                                 </figure>
@@ -163,7 +163,7 @@
                                     <figcaption>
                                         <h2 class="portfolio-title">Project Name</h2>
                                         <p class="portfolio-desc">A short description could go right here</p>
-                                        <a href="#" class="portfolio-link">More info</a>
+                                        <div class="portfolio-link" data-toggle="modal" data-target="#modal3">More info</div>
                                     </figcaption>
                                 </figure>
                                 <div class="sub-title">
@@ -180,7 +180,7 @@
                                     <figcaption>
                                         <h2 class="portfolio-title">Project Name</h2>
                                         <p class="portfolio-desc">A short description could go right here</p>
-                                        <a href="#" class="portfolio-link">More info</a>
+                                        <div class="portfolio-link" data-toggle="modal" data-target="#modal4">More info</div>
                                     </figcaption>
                                 </figure>
                                 <div class="sub-title">
@@ -198,7 +198,7 @@
                                     <figcaption>
                                         <h2 class="portfolio-title">Project Name</h2>
                                         <p class="portfolio-desc">A short description could go right here</p>
-                                        <a href="#" class="portfolio-link">More info</a>
+                                        <div class="portfolio-link" data-toggle="modal" data-target="#modal5">More info</div>
                                     </figcaption>
                                 </figure>
                                 <div class="sub-title">
@@ -215,7 +215,7 @@
                                     <figcaption>
                                         <h2 class="portfolio-title">Project Name</h2>
                                         <p class="portfolio-desc">A short description could go right here</p>
-                                        <a href="#" class="portfolio-link">More info</a>
+                                        <div class="portfolio-link" data-toggle="modal" data-target="#modal6">More info</div>
                                     </figcaption>
                                 </figure>
                                 <div class="sub-title">
@@ -252,8 +252,7 @@
                                     <h4>Our humble beginnings</h4>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo
-                                        <span
-                                            class="hidden-on-start">maiores magnam modi ab libero praesentium blanditiis. Lorem ipsum dolor sit amet
+                                        <span class="hidden-on-start">maiores magnam modi ab libero praesentium blanditiis. Lorem ipsum dolor sit amet
                                             consectetur. </span>
                                     </p>
                                 </div>
@@ -274,8 +273,7 @@
                                     <h4>Facing startup battles</h4>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo.
-                                        <span
-                                            class="hidden-on-start"> Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur accusantium
+                                        <span class="hidden-on-start"> Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur accusantium
                                             maxime molestiae sunt ipsa.</span>
                                     </p>
                                 </div>
@@ -312,7 +310,7 @@
                             <!-- end of middle circle -->
                             <div class="timeline-content right">
                                 <div class="sub-title">
-                                    <h4>Febrruary 2018</h4>
+                                    <h4>February 2018</h4>
                                     <h4>Our triumph</h4>
 
                                     <p>
@@ -323,7 +321,7 @@
                             </div>
                         </div>
                         <!-- ==== LAST ELEMENT OF TIMELINE - OTHER THEN REST, NO IMAGE-->
-                        <div data-aos="fade-up" data-aos-duration="1000" class="timeline-item">
+                        <div id="continued" data-aos="fade-up" data-aos-duration="1000" class="timeline-item">
                             <!-- middle circle div -->
                             <div class="timeline-img">
                                 <div class="tm-photo">
@@ -334,7 +332,9 @@
                                 </div>
                             </div>
                             <!-- end of middle circle -->
-
+                            <div class="last-item-content">
+                                ...soon
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -446,8 +446,8 @@
                     <div class="row row-eq-height">
                         <div class="col-md-6">
                             <!-- name -->
-                            <div class="form-group" >
-                                <input type="text" class="form-control"  id="inputAddress" placeholder="YOUR NAME*" name="name">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="inputAddress" placeholder="YOUR NAME*" name="name">
                             </div>
                             <!-- e-mail -->
                             <div class="form-group">
@@ -505,55 +505,320 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Modal 1 -->
         <div class="modal modal-md fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="EbonyIvory" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Ebony & Ivory</h5>
+                        <h5 class="modal-title" id="ebonyIvory">Ebony & Ivory</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                            <iframe src="//www.google.com/maps/embed/v1/place?q=Ebony+%26+Ivory+Music+Shop+And+Music+School
+                        <iframe src="//www.google.com/maps/embed/v1/place?q=Ebony+%26+Ivory+Music+Shop+And+Music+School
                             &zoom=18
                             &attribution_source=Google+Maps+Embed+API
                             &attribution_web_url=https://developers.google.com/maps/documentation/embed/
                             &key=AIzaSyDsKEg6-VeM7T7FppgkBKsM2iaoAc-x1N4" allowfullscreen>
                         </iframe>
                         <div class="container">
-                                <table class="table table-stripped table-hover bottom-border">
-                                        <tbody>
-                                            <tr>
-                                                <td scope="row">Adress</td>
-                                                <td>11 Varley Parade, London NW9 6RR, UK</td>
-                                               
-                                            </tr>
-                                            <tr>
-                                                <td scope="row">Phone</td>
-                                                <td>+44 20 8200 5510</td>
-                                                
-                                            </tr>
-                                            <tr>
-                                                    <td scope="row">Site</td>
-                                                    <td>ebonyivory.co.uk</td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
+                            <table class="table table-stripped table-hover bottom-border">
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">Description</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ipsa doloribus
+                                            nulla voluptas maiores temporibus alias labore. Tempore, minus distinctio.</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Adress</td>
+                                        <td>11 Varley Parade, London NW9 6RR, UK</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Phone</td>
+                                        <td>+44 20 8200 5510</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Site</td>
+                                        <td>ebonyivory.co.uk</td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
-        
+        <!-- Modal 2 -->
+        <div class="modal modal-md fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="SmartStationary" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="SmartStationary">Smart Stationary</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="//www.google.com/maps/embed/v1/place?q=Smart+Stationary+%26+Xerox,+No.16
+                                &zoom=18
+                                &attribution_source=Google+Maps+Embed+API
+                                &attribution_web_url=https://developers.google.com/maps/documentation/embed/
+                                &key=AIzaSyDsKEg6-VeM7T7FppgkBKsM2iaoAc-x1N4" allowfullscreen>
+                        </iframe>
+                        <div class="container">
+                            <table class="table table-stripped table-hover bottom-border">
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">Description</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ipsa doloribus
+                                            nulla voluptas maiores temporibus alias labore. Tempore, minus distinctio.</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Adress</td>
+                                        <td>No.16, Rajammal Layout, Ponnaiah Rajapuram, Gandhi Park, Selvapuram North, Coimbatore,
+                                            Tamil Nadu 641001, India</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Phone</td>
+                                        <td>+91 96555 99466</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Site</td>
+                                        <td>
+                                            <em>in preparation</em>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 3 -->
+        <div class="modal modal-md fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="CleverPoster" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="CleverPoster">Clever Poster</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="//www.google.com/maps/embed/v1/place?q=Movie+Posters+USA,+1006+Industrial+Dr,+Pleasant+Hill,
+                                    &zoom=18
+                                    &attribution_source=Google+Maps+Embed+API
+                                    &attribution_web_url=https://developers.google.com/maps/documentation/embed/
+                                    &key=AIzaSyDsKEg6-VeM7T7FppgkBKsM2iaoAc-x1N4" allowfullscreen>
+                        </iframe>
+                        <div class="container">
+                            <table class="table table-stripped table-hover bottom-border">
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">Description</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ipsa doloribus
+                                            nulla voluptas maiores temporibus alias labore. Tempore, minus distinctio.</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Adress</td>
+                                        <td>1006 Industrial Dr, Pleasant Hill, MO 64080, US</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Phone</td>
+                                        <td>+1 816-987-5523</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Site</td>
+                                        <td>
+                                            moviepostersusa.com
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 4 -->
+        <div class="modal modal-md fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="BurnedLogo" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="BurnedLogo">Burned Logo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="//www.google.com/maps/embed/v1/place?q=99designs,+2201+Broadway+%23815,+Oakland,+CA+94612,
+                                    &zoom=18
+                                    &attribution_source=Google+Maps+Embed+API
+                                    &attribution_web_url=https://developers.google.com/maps/documentation/embed/
+                                    &key=AIzaSyDsKEg6-VeM7T7FppgkBKsM2iaoAc-x1N4" allowfullscreen>
+                        </iframe>
+                        <div class="container">
+                            <table class="table table-stripped table-hover bottom-border">
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">Description</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ipsa doloribus
+                                            nulla voluptas maiores temporibus alias labore. Tempore, minus distinctio.</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Adress</td>
+                                        <td>2201 Broadway #815, Oakland, CA 94612, US</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Phone</td>
+                                        <td>+1 800-513-1678</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Site</td>
+                                        <td>99designs.com</td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 5 -->
+        <div class="modal modal-md fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="Treehouse" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="Treehouse">Treehouse Template</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="//www.google.com/maps/embed/v1/place?q=reehouse+Society,+730+Commercial+St,+San+Francisco,+CA+94108
+                                    &zoom=18
+                                    &attribution_source=Google+Maps+Embed+API
+                                    &attribution_web_url=https://developers.google.com/maps/documentation/embed/
+                                    &key=AIzaSyDsKEg6-VeM7T7FppgkBKsM2iaoAc-x1N4" allowfullscreen>
+                        </iframe>
+                        <div class="container">
+                            <table class="table table-stripped table-hover bottom-border">
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">Description</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ipsa doloribus
+                                            nulla voluptas maiores temporibus alias labore. Tempore, minus distinctio.</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Adress</td>
+                                        <td>730 Commercial St, San Francisco, CA 94108, US</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Phone</td>
+                                        <td>+1 415-988-9889</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Site</td>
+                                        <td>freetemplates.pro/</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 6 -->
+        <div class="modal modal-md fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="Vinyl" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="Vinyl">Vinyl Records</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="//www.google.com/maps/embed/v1/place?q=Originals+Vinyl,+701+Fillmore+St,+San+Francisco,+CA+94117
+                                    &zoom=18
+                                    &attribution_source=Google+Maps+Embed+API
+                                    &attribution_web_url=https://developers.google.com/maps/documentation/embed/
+                                    &key=AIzaSyDsKEg6-VeM7T7FppgkBKsM2iaoAc-x1N4" allowfullscreen>
+                        </iframe>
+                        <div class="container">
+                            <table class="table table-stripped table-hover bottom-border">
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">Description</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ipsa doloribus
+                                            nulla voluptas maiores temporibus alias labore. Tempore, minus distinctio.</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Adress</td>
+                                        <td>701 Fillmore St, San Francisco, CA 94117, US</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Phone</td>
+                                        <td>+1 415-660-8779</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Site</td>
+                                        <td>originalsvinyl.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 

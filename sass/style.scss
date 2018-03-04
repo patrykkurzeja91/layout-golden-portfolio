@@ -217,7 +217,7 @@ p {
             background: $black;
             transition: .2s;
             a {
-                margin: 8px;
+                padding: 8px;
                 font-size: 12px;
                 display: flex;
             }
@@ -403,6 +403,9 @@ a:hover {
         height: 400px;
         width: 100%;
         border: none;
+        @media (max-width: 768px) {
+            height: 300px;
+        }
        }
     td {
         border-top: none;
@@ -461,6 +464,7 @@ a:hover {
         .timeline-item {
             margin-bottom: 80px;
             position: relative;
+            
             @extend %clearfix;
             @media (max-width: 460px) {
                 margin-bottom: 100px;
@@ -482,6 +486,7 @@ a:hover {
                 overflow: hidden;
                 transform: translateX(-50%);
                 border-radius: 50%;
+                z-index: 2;
                 @media (max-width: 768px) {
                     width: 100px;
                     height: 100px;
@@ -590,8 +595,29 @@ a:hover {
                     }
                 }
             }
+            
+                .last-item-content {
+                    position: absolute;
+                    z-index: 0;
+                    right: 0;
+                    top: 0;
+                    @media (min-width: 768px) {
+                    font-size: 12rem;
+                    opacity: 0.08;
+                }
+                @media (max-width: 768px) {
+                    right: 20%;
+                    font-size: 7rem;
+                    opacity: 0.12;
+                }
+                @media (max-width: 500px) {
+                    
+                    right: 0;
+                }
+            }
         }
     }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -618,6 +644,9 @@ a:hover {
 .team {
     padding: 120px 0 70px;
     background: $background-grey;
+    @media (max-width: 768px) {
+        padding: 120px 0 0px;
+    }
     .team-photo {
         margin: 0 auto;
         width: 230px;
@@ -663,23 +692,29 @@ a:hover {
             border: 3px solid $black;
             border-radius: 50%;
             transition: .3s;
-            &:hover {
-                border: none;
-                color: $white;
+            @media(min-width: 768px) {
+                &:hover {
+                    border: none;
+                    color: $white;
+                }
+            }
+            
+        }
+        @media(min-width: 768px) {
+            .i-facebook:hover {
+                background: $facebook-blue;
+            }
+            .i-twitter:hover {
+                background: $twitter-blue;
+            }
+            .i-pinterest:hover {
+                background: $pinterest-red;
+            }
+            .i-google:hover {
+                background: $google-red;
             }
         }
-        .i-facebook:hover {
-            background: $facebook-blue;
-        }
-        .i-twitter:hover {
-            background: $twitter-blue;
-        }
-        .i-pinterest:hover {
-            background: $pinterest-red;
-        }
-        .i-google:hover {
-            background: $google-red;
-        }
+        
     }
 }
 
@@ -749,10 +784,12 @@ footer {
         }
         .my-social-network {
             height: 90px;
-            ;
             display: flex;
             align-items: center;
             justify-content: center;
+            @media (max-width: 768px) {
+                height: 50px;
+            }
             a {
                 display: flex;
                 flex-wrap: nowrap;
@@ -767,27 +804,33 @@ footer {
                 border-radius: 50%;
                 transition: .3s;
                 margin: auto 5px;
-                &:hover {
-                    border: none;
-                    color: $white;
+                @media (min-width: 768px) {
+                    &:hover {
+                        border: none;
+                        color: $white;
+                    }
+                }
+                
+            }
+            @media (min-width: 768px) {
+                .i-facebook:hover {
+                    background: $facebook-blue;
+                    transform: rotatez(360deg);
+                }
+                .i-github:hover {
+                    background: black;
+                    transform: rotatez(360deg);
+                }
+                .i-instagram:hover {
+                    background: #9d7144;
+                    transform: rotatez(360deg);
+                }
+                .i-google:hover {
+                    background: $google-red;
+                    transform: rotatez(360deg);
                 }
             }
-            .i-facebook:hover {
-                background: $facebook-blue;
-                transform: rotatez(360deg);
-            }
-            .i-github:hover {
-                background: black;
-                transform: rotatez(360deg);
-            }
-            .i-instagram:hover {
-                background: #9d7144;
-                transform: rotatez(360deg);
-            }
-            .i-google:hover {
-                background: $google-red;
-                transform: rotatez(360deg);
-            }
+            
         }
     }
 }

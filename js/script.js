@@ -11,8 +11,8 @@ $(document).ready(function () {
 	toggleBtn();
 	// showText();
 	//toggle 'show'class in navbar-collapsed
-	//hideMenu();
-	var scrollLink = $('header a');
+	hideMenu();
+	var scrollLink = $('nav a');
 	scrollLink.click(function (e) {
 		e.preventDefault();
 		$("html, body").stop().animate({
@@ -30,6 +30,7 @@ $(document).ready(function () {
 		}
 		//run parallax in hero
 		parallax();
+		
 		//active watching on navbar links
 		var scrollbarLocation = $(this).scrollTop();
 		scrollLink.each(function () {
@@ -41,17 +42,27 @@ $(document).ready(function () {
 					$(this).parent().siblings().removeClass('active');
 				}
 			}
-
-
 		});
 	});
+		
 
 	function parallax() {
 		var wScroll = $(window).scrollTop();
 		var servicesOffset = $('.services').offset().top;
+		var teamOffset = $('.team').offset().top;
+		var portfolioOffset = $('#continued').offset().top-500;
+		var timelineScroll = wScroll - portfolioOffset;
+
 		if (wScroll < servicesOffset) {
 			$('.parallax-bg').css('background-position', 'center ' + (wScroll * 0.25) + 'px');
+			
 		}
+		if (wScroll < teamOffset && wScroll > portfolioOffset) {
+			$('.last-item-content').css(
+				'top', (-3+timelineScroll*0.009)+'rem');
+			console.log(timelineScroll);
+		}
+		
 
 	}
 	//function showText not working yet
@@ -75,17 +86,15 @@ $(document).ready(function () {
 				$(this).closest('figure').toggleClass('active');
 			});
 		}
-		
-		
 	}
-	
-	/* funkcja która chowa menu podczas kliknięcia na link - odnośnik
+	// funkcja która chowa menu podczas kliknięcia na link - odnośnik 
 	function hideMenu() {
-		$('#home a').click(function (e) {
+		$('nav a').click(function (e) {
 			e.preventDefault();
 			$('.navbar-collapse').toggleClass('show');
+			$('#toggle-btn').toggleClass('active');
 		});
 	}
-*/
+
   
 });
