@@ -1,9 +1,9 @@
 $(document).ready(function () {
 	AOS.init({
-		disable: function () {
-			var maxWidth = 768;
-			return window.innerWidth < maxWidth;
-		}
+		// disable: function () {
+		// 	var maxWidth = 768;
+		// 	return window.innerWidth < maxWidth;
+		// }
 	});
 	//toggle figcaption in portfolio
 	toggleImgFigcaption()
@@ -59,7 +59,7 @@ $(document).ready(function () {
 		}
 		if (wScroll < teamOffset && wScroll > portfolioOffset) {
 			$('.last-item-content').css(
-				'top', (-3+timelineScroll*0.009)+'rem');
+				'top', (-timelineScroll*0.009)+'rem');
 			console.log(timelineScroll);
 		}
 		

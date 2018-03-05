@@ -6430,6 +6430,8 @@ p {
     .hero h1 {
       margin-bottom: 1.5rem;
       margin-top: 1rem; } }
+  .hero .sub-title {
+    z-index: 2; }
 
 .parallax-bg {
   -webkit-transition: initial;
@@ -6441,7 +6443,19 @@ p {
   -ms-flex-align: center;
   align-items: center;
   background-position: center;
-  background-size: cover; }
+  position: relative;
+  top: -50px;
+  background-size: cover;
+  opacity: 1; }
+  .parallax-bg::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0; }
 
 .row::after,
 .row::before {
