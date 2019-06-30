@@ -5,8 +5,7 @@ $(document).ready(function () {
 		// 	return window.innerWidth < maxWidth;
 		// }
 	});
-	//toggle figcaption in portfolio
-	toggleImgFigcaption()
+
 	//toggle 'active'class to btn
 	toggleBtn();
 	// showText();
@@ -30,7 +29,7 @@ $(document).ready(function () {
 		}
 		//run parallax in hero
 		parallax();
-		
+
 		//active watching on navbar links
 		var scrollbarLocation = $(this).scrollTop();
 		scrollLink.each(function () {
@@ -44,50 +43,35 @@ $(document).ready(function () {
 			}
 		});
 	});
-		
+
 
 	function parallax() {
 		var wScroll = $(window).scrollTop();
 		var servicesOffset = $('.services').offset().top;
 		var teamOffset = $('.team').offset().top;
-		var portfolioOffset = $('#continued').offset().top-500;
+		var portfolioOffset = $('#continued').offset().top - 500;
 		var timelineScroll = wScroll - portfolioOffset;
 
 		if (wScroll < servicesOffset) {
 			$('.parallax-bg').css('background-position', 'center ' + (wScroll * 0.25) + 'px');
-			
+
 		}
 		if (wScroll < teamOffset && wScroll > portfolioOffset) {
 			$('.last-item-content').css(
-				'top', (-timelineScroll*0.009)+'rem');
-			console.log(timelineScroll);
+				'top', (-timelineScroll * 0.009) + 'rem');
 		}
-		
+
 
 	}
-	//function showText not working yet
-	// function showText() {
-	// 	$('.timeline-item').click(function (e) {
-	// 		e.preventDefault();
-	// 		$('.sub-title p').closest('span').toggleClass('hidden-on-start');
-	// 	});
-	// }
+
 	function toggleBtn() {
-		
 		$('#toggle-btn').click(function (e) {
 			e.preventDefault();
 			$(this).toggleClass('active');
 		});
 	}
-	function toggleImgFigcaption() {
-		if (document.documentElement.clientWidth <= 768) {
-			$('.portfolio-photo').click(function (e) {
-				e.preventDefault();
-				$(this).closest('figure').toggleClass('active');
-			});
-		}
-	}
-	// funkcja która chowa menu podczas kliknięcia na link - odnośnik 
+
+	// funkcja która chowa menu podczas kliknięcia na link - odnośnik
 	function hideMenu() {
 		$('nav a').click(function (e) {
 			e.preventDefault();
@@ -96,5 +80,5 @@ $(document).ready(function () {
 		});
 	}
 
-  
+
 });

@@ -356,7 +356,8 @@ p {
         }
     }
     @media (max-width:767.98px) {
-        &.active figcaption {
+        &:active figcaption,
+        &:hover figcaption {
             top: 0;
         }
     }
@@ -393,13 +394,13 @@ a:hover {
 
 .modal {
     font-family: $ff-mont;
-    color: $white;
+    color: $black;
     margin-top: 40px;
     .row {
         font-weight: 900;
     }
     .close {
-        color: $white;
+        color: $black;
     }
     iframe {
         height: 400px;
@@ -415,6 +416,14 @@ a:hover {
     }
     .modal-footer {
         margin: 15px auto;
+        border-top: 0;
+    }
+    .table {
+        margin-bottom: 0;
+        margin-top: 1rem;
+        tr, th, td{
+            border: 0;
+        }
     }
 }
 
