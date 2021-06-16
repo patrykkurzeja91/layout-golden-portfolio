@@ -35,7 +35,7 @@
     "rimraf": "^2.6.3"
   },
   "dependencies": {
-    "autoprefixer": "^9.6.0",
+    "autoprefixer": "^9.8.6",
     "bootstrap": "4.0.0-alpha.6",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
